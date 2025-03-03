@@ -1,10 +1,10 @@
+const { name } = $options
 const { type } = $arguments
+
 const compatible_outbound = {
   tag: 'COMPATIBLE',
   type: 'direct',
 }
-
-let name = profile
 
 let compatible
 let config = JSON.parse($files[0])
