@@ -1,6 +1,3 @@
-console.log($options_haha)
-
-const { type } = $arguments
 
 const compatible_outbound = {
   tag: 'COMPATIBLE',
@@ -10,8 +7,8 @@ const compatible_outbound = {
 let compatible
 let config = JSON.parse($files[0])
 let proxies = await produceArtifact({
-  name,
-  type: /^1$|col/i.test(type) ? 'collection' : 'subscription',
+  name: $options.profile,
+  type: /^1$|col/i.test($options.type) ? 'collection' : 'subscription',
   platform: 'sing-box',
   produceType: 'internal',
 })
