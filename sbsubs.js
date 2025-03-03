@@ -1,6 +1,5 @@
 console.log($options_haha)
 
-const { name } = $options
 const { type } = $arguments
 
 const compatible_outbound = {
