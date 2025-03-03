@@ -1,3 +1,5 @@
+console.log($options)
+
 const { name } = $options
 const { type } = $arguments
 
