@@ -4,7 +4,7 @@ const compatible_outbound = {
   type: 'direct',
 }
 
-let name = $options
+let name = profile
 
 let compatible
 let config = JSON.parse($files[0])
