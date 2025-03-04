@@ -46,7 +46,22 @@ config.outbounds.forEach(outbound => {
   }
 });
 
+// 直接遍历并修改数组中的对象
+config.outbounds.forEach(item => {
+    // 检查并直接修改 short_id
+    if (item.tls?.reality?.short_id === "null") {
+        item.tls.reality.short_id = "abcdef";
+    }
+});
+
 $content = JSON.stringify(config, null, 2)
+
+/*
+const encoder = new TextEncoder();
+const bytes = encoder.encode(JSON.stringify(config, null, 2));
+const decoder = new TextDecoder('gbk');
+$content = decoder.decode(bytes)
+*/
 
 function getTags(proxies, regex) {
   return (regex ? proxies.filter(p => regex.test(p.tag)) : proxies).map(p => p.tag)
